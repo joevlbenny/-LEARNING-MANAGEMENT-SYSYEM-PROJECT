@@ -1,0 +1,10 @@
+nav ul li a {
+    padding: 10px 20px;
+    color: green;
+}
+
+nav {
+    color: blue;
+    display: none;
+    gap: 1rem;
+}
