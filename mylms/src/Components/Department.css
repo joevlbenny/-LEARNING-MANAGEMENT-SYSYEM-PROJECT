@@ -1,0 +1,36 @@
+.App {
+
+    height: 100%;
+
+}
+
+tr {
+    border-bottom: 1px solid white;
+}
+
+table {
+    width: 100%;
+
+    max-width: 800px;
+
+
+    margin: 0 auto;
+
+    padding: 20px;
+}
+
+
+
+th,
+td {
+
+    padding: 8px;
+
+
+    text-align: center;
+}
+
+th {
+
+    background-color: #f2f2f2;
+}
