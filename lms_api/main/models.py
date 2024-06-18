@@ -34,15 +34,15 @@ class Student(models.Model):
     interests=models.TextField()
 
 class StudentAssignments(models.Model):
-    teacher=models.ForeignKey(Teacher,on_delete=models.CASCADE)
-    student = models.ForeignKey(Student,on_delete=models.CASCADE)
+    teacher=models.ForeignKey(Teacher,on_delete=models.CASCADE,null=True)
+    student = models.ForeignKey(Student,on_delete=models.CASCADE,null=True)
     title=models.CharField(max_length=200)
     detail=models.TextField(max_length=100,null=True)  
     add_time=models.DateField(auto_now_add=True) 
 
 
     def __str__(self) :
-        return f"{title}"    
+        return f"{self.title}"    
 
     class Meta:
         verbose_name_plural='Student Assignments'
