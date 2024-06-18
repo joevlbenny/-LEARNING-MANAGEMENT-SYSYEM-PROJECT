@@ -78,3 +78,10 @@ class AssignmentList(generics.ListCreateAPIView):
 class StudentList(generics.ListCreateAPIView):
     queryset=models.Student.objects.all()
     serializer_class=StudentSerializer    
+    def get_queryset(self):
+        studentid=self.kwargs.get('studentid')
+        teacherid=self.kwargs.get('teacherid')
+        student=models.Student.objects.get(pk=studentid)
+        teacher=models.Teacher.objects.get(pk=teacherid)
+        return models.StudentAssignments.objects.filter(student=student,teacher=teacher)    
+ 
