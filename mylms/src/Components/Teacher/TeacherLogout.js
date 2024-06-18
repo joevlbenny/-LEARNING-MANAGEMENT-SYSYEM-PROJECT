@@ -1,8 +1,9 @@
 import React from 'react'
 
 function TeacherLogout() {
-    localStorage.removeItem('teacherLoginStatus')
-    window.location.href = '/teacherlogin'
+  localStorage.removeItem('teacherLoginStatus');
+  localStorage.removeItem('teacherToken');
+  window.location.href = '/';
     return (
         <div>
 
